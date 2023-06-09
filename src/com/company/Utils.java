@@ -47,4 +47,11 @@ public class Utils {
         writer.close();
     }
 
+    public static void toStdOut(PerformanceResults results) {
+        String rowF = "%s, %d, %s\n";
+
+        for (PerformanceResults.PerformanceResult performanceResult: results.getResultList()) {
+            System.out.println(String.format(rowF, performanceResult.getAlgorithmName().getName(), performanceResult.getComputeTime(), performanceResult.getDataSetName()));
+        }
+    }
 }

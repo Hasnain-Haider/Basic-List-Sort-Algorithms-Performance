@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String dataDir = "src/com/company/data";
+        String dataDir = "src/com/company/testData";
         List<File> dataFiles = Arrays.asList(
                 new File(dataDir.concat("/set1.txt")),
                 new File(dataDir.concat("/set2.txt")),
@@ -34,8 +34,9 @@ public class Main {
         }
 
         try {
-            Utils.writePerformanceToCSV(performanceResults);
-        } catch (IOException e) {
+//            Utils.writePerformanceToCSV(performanceResults);
+            Utils.toStdOut(performanceResults);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
